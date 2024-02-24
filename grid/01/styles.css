@@ -1,0 +1,47 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-family: arial;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .container {
+    width: 600px;
+    margin: 50px auto;
+    border: 5px solid #333;
+    box-sizing: border-box;
+    padding: 5px;
+    display: grid;
+    grid-template-areas: "header header" "aside main" "nav main" "footer footer"; /* Pembuatan nama area dengan ketentuan 2 kolom */
+    grid-template-columns: 1fr 1.5fr; /* Mengatur ukuran kolom 1fr(kolom pertama) 1.5fr(kolom kodua) */
+    grid-template-rows: 1fr 1fr 1.3fr; /* Mengatur ukuran baris 1fr(baris pertama) 1fr(baris kedua) 1fr(baris ketiga) untuk baris ke empat tidak tulis */
+  }
+   header {
+    grid-area: header; /* Memberi tahu nama grid, sehingga dia mengambil 2 kolom */
+    background-color: #B063D8;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+  aside{
+    grid-area: aside;   
+    background-color: #2f93ff;
+    padding: 60px 0;
+  }
+  nav{
+    grid-area: nav;   
+    background-color: #e45765;
+    padding: 100px 0;
+  }
+  main{
+    grid-area: main;   
+    background-color: #e0aa77;
+    padding: 117px;
+  }
+  footer {
+    grid-area: footer;   
+    background-color: #666;
+    padding: 20px 0;
+  }
