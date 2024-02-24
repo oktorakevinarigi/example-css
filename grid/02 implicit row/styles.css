@@ -1,0 +1,22 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #ddd;
+}
+.container {
+  width: 60%;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: 100px 50px;
+  grid-template-rows: 50px 100px 150px;
+  grid-auto-rows: 70px; /* Mengatur ukuran baris implicit/yang tidak diatur di grid-template-rows */
+}
+.item {
+  background-color: rgb(138, 209, 254);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item:nth-child(even) { /* nth-child(even) item yang genap */
+  background-color: rgb(255, 142, 142);
+}

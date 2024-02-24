@@ -1,0 +1,23 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #ddd;
+}
+.container {
+  width: 600px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: 100px 50px;
+  grid-template-rows: 50px 30px;
+  grid-auto-flow: column; /* Mengatur implicit kolom, jika tidak ada grid-auto-flow maka default nilai row */
+  grid-auto-columns: 400px; /* Ukuran implicit kolom  */
+}
+.item {
+  background-color: rgb(138, 209, 254);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item:nth-child(even) { /* nth-child(even) item yang genap */
+  background-color: rgb(255, 142, 142);
+}
