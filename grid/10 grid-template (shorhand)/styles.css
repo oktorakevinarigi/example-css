@@ -1,0 +1,26 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #ddd;
+}
+.container {
+  width: 60%;
+  margin: 50px auto;
+  display: grid;
+  /* Tanpa shorthand */
+  /* grid-template-rows: [baris1-mulai] 50px [baris1-akhir baris2-mulai] 50px [baris2-akhir];
+  grid-template-columns: 1fr 2fr 3fr;
+  grid-template-areas: 'header header header' 'footer footer footer'; */
+
+  /* Shrothand */
+  grid-template: [baris1-mulai] 'header header header' 50px [baris1-akhir baris2-mulai] 'footer footer footer' 50px [baris2-akhir] / 1fr 2fr 3fr; /* INITIAL_NAME NAME_AREA ROW / COLUMS */
+}
+.item {
+  background-color: rgb(138, 209, 254);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item:nth-child(even) { /* nth-child(even) item yang genap */
+  background-color: rgb(255, 142, 142);
+}

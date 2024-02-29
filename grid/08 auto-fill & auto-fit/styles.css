@@ -1,0 +1,21 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #ddd;
+}
+.container {
+  width: 60%;
+  margin: 50px auto;
+  border: 5px orange solid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 100px) /* auto-fill akan ada kolom kosong di akhir grid, auto-fit tidak ada kolom kosong diakhir grid. Akan terjadi jika jumlahnya itemnya sedikit */
+}
+.item {
+  background-color: rgb(138, 209, 254);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item:nth-child(even) { /* nth-child(even) item yang genap */
+  background-color: rgb(255, 142, 142);
+}
